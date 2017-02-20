@@ -31,7 +31,7 @@ h6 {
 }
 
 .intro-header {
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
@@ -48,12 +48,12 @@ h6 {
 .intro-message > img {
     width: 140px;
     height: 140px;
-    box-shadow: 0 0 10px rgba(255,255,255,0.6);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .6);
 }
 
 .intro-message > h1 {
     margin: 30px 0 0 0;
-    text-shadow: 0 0 10px rgba(255,255,255,0.6);
+    text-shadow: 0 0 10px rgba(255, 255, 255, .6);
     font-size: 5em;
     color: #3e382a;
 }
@@ -61,14 +61,29 @@ h6 {
 .intro-divider {
     width: 400px;
     border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 
 .intro-message > h3 {
-    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    text-shadow: 0 0 10px rgba(0, 0, 0, .6);
 }
 
-@media(max-width:767px) {
+a.social-buttons {
+    color: #f8f8f8;
+    padding: 10px 16px;
+    line-height: 1.3333333;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+a.social-buttons:hover {
+    text-decoration: none;
+    text-shadow: 0 0 10px rgba(255, 255, 255, .6);
+}
+
+@media (max-width:767px) {
     .intro-message {
         padding-bottom: 15%;
     }
@@ -129,7 +144,7 @@ h6 {
 
 .contact h2 {
     margin: 0;
-    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    text-shadow: 0 0 10px rgba(0, 0, 0, .6);
     font-size: 3em;
 }
 
@@ -142,21 +157,14 @@ h6 {
     margin-top: 0;
 }
 
-.intro-social-buttons .btn-default,
-.contact-social-buttons .btn-default {
-    background: transparent;
-    color: #fff;
-    border: none;
-}
-
-@media(max-width:1199px) {
+@media (max-width: 1199px) {
     ul.contact-social-buttons {
         float: left;
         margin-top: 15px;
     }
 }
 
-@media(max-width:767px) {
+@media (max-width: 767px) {
     .contact h2 {
         margin: 0;
         font-size: 3em;
@@ -174,8 +182,14 @@ h6 {
 }
 
 footer {
-    padding: 50px 0;
-    background-color: #f8f8f8;
+    padding: 150px 0 50px 0;
+    background-color: #222;
+}
+
+@media (max-width:767px) {
+    footer {
+        padding: 50px 0;
+    }
 }
 
 p.copyright {
