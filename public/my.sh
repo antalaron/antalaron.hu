@@ -9,6 +9,7 @@ if command -v git &> /dev/null; then
 
     curl -o ~/.gitignore https://antalaron.codes/config/gitignore
     git config --global core.excludesfile ~/.gitignore
+    git config --global init.defaultBranch master
 fi
 
 echo "Done! Please restart your terminal."
