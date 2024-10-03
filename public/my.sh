@@ -6,6 +6,7 @@ curl -o ~/.bashrc https://antalaron.hu/config/bashrc 2>/dev/null
 if command -v git &> /dev/null; then
     git config --global user.name "Antal Áron"
     git config --global user.email "antalaron@antalaron.hu"
+    git config --global github.user antalaron
 
     curl -o ~/.gitignore https://antalaron.hu/config/gitignore 2>/dev/null
     git config --global core.excludesfile ~/.gitignore
