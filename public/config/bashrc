@@ -172,6 +172,21 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Change node version when changing directory and .node-version or .nvmrc file is present
+cd_path() {
+    builtin cd "$@" || return
+
+    if command -v nvm > /dev/null 2>&1; then
+        if [ -f ".node-version" ]; then
+            nvm use "$(cat .node-version)"
+        elif [ -f ".nvmrc" ]; then
+            nvm use
+        fi
+    fi
+}
+
+alias cd='cd_path'
+
 if command -v mkcert &>/dev/null; then
     export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 fi
